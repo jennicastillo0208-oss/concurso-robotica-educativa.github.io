@@ -1,0 +1,384 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8; /* Azul grisáceo muy claro */
+            color: #2c3e50;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* --- CABECERA --- */
+        header {
+            background: #0d2c54; /* Azul marino tecnológico */
+            color: #ffffff;
+            padding: 2.5rem;
+            text-align: center;
+            border-bottom: 4px solid #00a8cc; /* Cian eléctrico */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            background: #1a3a5f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 12px;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        nav li { 
+            margin: 5px 20px; 
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+            text-shadow: 0 0 8px #00d4ff;
+        }
+
+        /* --- SECCIONES --- */
+        section { 
+            padding: 40px;
+            background: #ffffff;
+            color: #444444;
+            max-width: 1000px;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(13, 44, 84, 0.15);
+        }
+
+        h2, h3 {
+            color: #0d2c54;
+            border-left: 5px solid #00a8cc;
+            padding-left: 15px;
+            margin-top: 1.5rem;
+        }
+
+        h4 {
+            color: #1a3a5f; /* Azul intermedio para jerarquía */
+            font-size: 1.25rem;
+            margin-top: 1.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            border-bottom: 2px solid #00a8cc; /* Línea sutil cian abajo */
+            padding-bottom: 4px;
+        }
+
+        /* --- LOGOS CENTRADOS Y MEDIANOS --- */
+        .logos-container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .logos-container img {
+            height: 110px; /* Tamaño solicitado mantenido */
+            width: auto;
+            margin: 10px;
+            filter: grayscale(20%);
+            transition: transform 0.3s ease;
+        }
+
+        .logos-container img:hover {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        /* --- IMAGEN BANNER --- */
+        .banner-img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .banner-primer-concurso {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            display: block;
+            margin: 0 auto 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(13, 44, 84, 0.15);
+        }
+
+        .banner-segundo-concurso {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            display: block;
+            margin: 0 auto 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(13, 44, 84, 0.15);
+        }
+
+        .banner-tercer-concurso {
+            width: 100%;
+            max-width: 650px; /* Misma escala que los concursos I y II para conservar la simetría */
+            height: auto;     /* Calcula automáticamente el alto sin deformar ni recortar la cabecera ni los logos */
+            display: block;
+            margin: 0 auto 25px; /* Centrado horizontal y margen inferior para separar del párrafo */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(13, 44, 84, 0.15); /* Sombra suave idéntica */
+        }
+
+        .banner-cuarto-concurso {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            display: block;
+            margin: 0 auto 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(13, 44, 84, 0.15);
+        }
+
+        /* --- FORMULARIOS --- */
+        form {
+            background: #f9fbfc;
+            padding: 30px;
+            border: 1px solid #d1d9e6;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #0d2c54;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd6e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+            background-color: #fff;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #00a8cc;
+            box-shadow: 0 0 5px rgba(0, 168, 204, 0.2);
+        }
+
+        button {
+            background: #00a8cc;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #0d2c54;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* --- PERFIL DE USUARIO --- */
+        #perfilUsuario {
+            background: #eef7ff;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 6px solid #00a8cc;
+            margin-top: 30px;
+        }
+
+        #perfilUsuario h2 {
+            border-left: none;
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .perfil-dato {
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #ccd6e0;
+        }
+
+        /* --- LISTAS Y OTROS --- */
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width:768px){
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            header { padding: 1.5rem; }
+            header h1 { font-size: 1.8rem; }
+            section { margin: 15px; padding: 20px; }
+            .logos-container { gap: 20px; }
+            .logos-container img { height: 80px; } /* Ajuste menor para móviles */
+        }
+
+        /* --- GALERÍA --- */
+        .galeria {
+    display: grid;
+    /* Cambiamos el mínimo de 250px a 180px para que entren más columnas */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 12px; /* Reducimos un poco el espacio entre ellas */
+    max-width: 1000px; /* Reducimos el ancho máximo total de la galería */
+    margin: 0 auto;
+    }
+
+/* 2. El contenedor de cada tarjeta */
+    .galeria-item {
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+
+/* 3. ¡Aquí controlamos el tamaño real de las fotos! */
+    .galeria-item img {
+        width: 100%;
+        height: 150px; /* Reducimos la altura de 200px a 150px */
+        object-fit: cover; /* Evita que se deformen al achicarlas */
+        display: block;
+    }
+
+    /* --- ESTILOS PARA LA SECCIÓN DE URLS DE CONCURSOS PASADOS --- */
+        .seccion-urls-concursos {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8fafc; /* Fondo grisáceo muy suave para dar contraste */
+            border-radius: 8px;
+            border-left: 4px solid #00a8cc; /* Detalle en cian en el borde izquierdo */
+        }
+
+        .seccion-urls-concursos p {
+            font-size: 14px;
+            color: #555555;
+            margin-bottom: 15px;
+        }
+
+        .contenedor-enlaces-concursos {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* Espaciado uniforme entre cada enlace */
+            max-width: 500px; /* Controla el ancho en pantallas de PC */
+        }
+
+        .boton-enlace-concurso {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background-color: #ffffff;
+            color: #1a3a5f; /* Tu azul intermedio */
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .boton-enlace-concurso:hover {
+            background-color: #0d2c54; /* Cambia a tu azul marino principal al pasar el mouse */
+            color: #ffffff;
+            border-color: #0d2c54;
+            transform: translateX(5px); /* Desplazamiento interactivo sutil a la derecha */
+        }
+
+        .icono-enlace {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            background: #0d2c54;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 4px solid #00a8cc;
+            margin-top: 50px;
+        }
+
+        footer h3 {
+            border-left: none; 
+            padding-left: 0;
+            color: #00d4ff; 
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        footer a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .dev-info {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-style: italic;
+        }
